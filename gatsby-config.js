@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Crosspass Podcast`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Crosspass Podcast, hosted by Daniel and Bosko`,
+    author: `@kdxcii_`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
