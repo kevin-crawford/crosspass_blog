@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./Footer"
 import "../styles/index.scss"
 
 const Layout = ({ children }) => (
@@ -18,10 +19,17 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossOrigin="anonymous"
+        />
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="container" id="content">
           {children}
         </div>
+        <Footer />
       </>
     )}
   />
