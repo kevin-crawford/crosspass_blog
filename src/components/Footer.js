@@ -13,7 +13,7 @@ const Footer = () => (
             rel="noopener noreferrer"
             className="twitter"
           >
-            <i class="fab fa-twitter fa-2x" />
+            <i className="fab fa-twitter fa-2x" />
           </a>
         </li>
         <li>
@@ -23,7 +23,7 @@ const Footer = () => (
             rel="noopener noreferrer"
             className="soundcloud"
           >
-            <i class="fab fa-soundcloud fa-2x" />
+            <i className="fab fa-soundcloud fa-2x" />
           </a>
         </li>
         <li>
@@ -33,7 +33,7 @@ const Footer = () => (
             rel="noopener noreferrer"
             className="apple-music"
           >
-            <i class="fas fa-music fa-2x" />
+            <i className="fas fa-music fa-2x" />
           </a>
         </li>
       </ul>

@@ -44,9 +44,9 @@ const IndexPage = () => (
           render={data => {
             return (
               <div>
-                {data.allMarkdownRemark.edges.map(({ node }, index) => (
+                {data.allMarkdownRemark.edges.map(({ node }) => (
                   <Post
-                    key={index}
+                    key={node.id}
                     title={node.frontmatter.title}
                     author={node.frontmatter.author}
                     path={node.frontmatter.path}
