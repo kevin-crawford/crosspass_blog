@@ -2,7 +2,7 @@
 title: "Third Post - Introduction"
 date: 2018-12-03 07:00:00
 author: "Daniel Hargis"
-path: "/third-post"
+
 image: ../../images/javascript.jpg
 tags:
   - design

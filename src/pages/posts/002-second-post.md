@@ -2,7 +2,7 @@
 title: "Second Post - Introduction"
 date: 2018-12-02 07:00:00
 author: "Kevin Crawford"
-path: "/second-post"
+
 image: ../../images/javascript.jpg
 tags:
   - code
