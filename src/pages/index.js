@@ -3,8 +3,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, StaticQuery } from "gatsby"
 import Post from "../components/Post"
-import Sidebar from "../components/Sidebar"
-import { Row, Col } from "reactstrap"
 
 const indexQuery = graphql`
   query {
@@ -36,38 +34,29 @@ const indexQuery = graphql`
 `
 
 const IndexPage = () => (
-  <Layout>
+  <Layout pageTitle="Crosspass Podcast">
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Home</h1>
-    <Row>
-      <Col md="8">
-        <StaticQuery
-          query={indexQuery}
-          render={data => {
-            return (
-              <div>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <Post
-                    key={node.id}
-                    title={node.frontmatter.title}
-                    author={node.frontmatter.author}
-                    slug={node.fields.slug}
-                    date={node.frontmatter.date}
-                    body={node.excerpt}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    tags={node.frontmatter.tags}
-                  />
-                ))}
-              </div>
-            )
-          }}
-        />
-      </Col>
-
-      <Col md="4">
-        <Sidebar />
-      </Col>
-    </Row>
+    <StaticQuery
+      query={indexQuery}
+      render={data => {
+        return (
+          <div>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+              <Post
+                key={node.id}
+                title={node.frontmatter.title}
+                author={node.frontmatter.author}
+                slug={node.fields.slug}
+                date={node.frontmatter.date}
+                body={node.excerpt}
+                fluid={node.frontmatter.image.childImageSharp.fluid}
+                tags={node.frontmatter.tags}
+              />
+            ))}
+          </div>
+        )
+      }}
+    />
   </Layout>
 )
 
