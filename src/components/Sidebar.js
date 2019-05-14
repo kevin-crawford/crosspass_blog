@@ -1,10 +1,73 @@
 import React from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
-import { Card, CardTitle, CardBody, Form, FormGroup, Input } from "reactstrap"
+import {
+  Card,
+  CardTitle,
+  CardBody,
+  CardText,
+  Form,
+  FormGroup,
+  Input,
+} from "reactstrap"
 import Img from "gatsby-image"
 
-const Sidebar = () => (
+const Sidebar = ({ author, authorFluid }) => (
   <div>
+    {author && (
+      <Card>
+        <Img className="card-image-top" fluid={authorFluid} />
+        <CardBody>
+          <CardTitle className="text-center text-uppercase mb-3">
+            {author.name}
+          </CardTitle>
+          <CardText>{author.bio}</CardText>
+          <div className="author-social-links text-center">
+            <ul>
+              <li>
+                <a
+                  href={author.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="twitter"
+                >
+                  <i class="fab fa-twitter fa-2x" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin"
+                >
+                  <i class="fab fa-linkedin-in fa-2x" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github"
+                >
+                  <i class="fab fa-github fa-2x" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.google}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="google"
+                >
+                  <i className="fab fa-google fa-2x" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
+    )}
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
