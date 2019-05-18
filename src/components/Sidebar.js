@@ -40,7 +40,7 @@ const Sidebar = ({ author, authorFluid }) => (
                   rel="noopener noreferrer"
                   className="linkedin"
                 >
-                  <i class="fab fa-linkedin-in fa-2x" />
+                  <i className="fab fa-linkedin-in fa-2x" />
                 </a>
               </li>
               <li>
